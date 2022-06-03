@@ -1,6 +1,17 @@
 // Import express module to ctreate express app
 const express = require('express');
+const colors = require('colors');
 const { errorHandler } = require('./middleware/errorMiddleware');
+const connectDB = require('./config/db');
+
+// Loads env file contents into process.env
+const dotenv = require('dotenv').config();
+
+// Initializing port
+const PORT = process.env.PORT || 8000;
+
+// Connect  to database
+connectDB();
 
 // Initialize App
 const app = express();
@@ -8,12 +19,6 @@ const app = express();
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
-
-// Loads env file contents into process.env
-const dotenv = require('dotenv').config();
-
-// Initializing port
-const PORT = process.env.PORT || 8000;
 
 // Returns response
 app.get('/', (req, res) =>
