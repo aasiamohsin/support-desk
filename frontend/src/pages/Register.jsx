@@ -33,7 +33,7 @@ export const Register = () => {
     <>
       <section className='heading'>
         <h1>
-          <FaUser /> Register
+          <FaUser size={22} /> Register
         </h1>
         <p>Create an account</p>
       </section>
