@@ -81,7 +81,7 @@ li {
 }
 
 .form {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -90,12 +90,16 @@ li {
 }
 
 .form-group input {
-  width: 70%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #eae1e1;
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: 1px solid #dfe0e6;
 }
 
 .btn {
@@ -107,8 +111,25 @@ li {
   color: #dfe0e6;
   font-size: 16px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-reverse {
+  background-color: #dfe0e6;
+  color: #080c25;
+}
+
+.btn svg {
+  margin-right: 5px;
 }
 
 .btn-block {
-  width: 70%;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.btn:hover {
+  transform: scale(0.99);
 }
