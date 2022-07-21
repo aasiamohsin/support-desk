@@ -27,6 +27,8 @@ app.get('/', (req, res) =>
 
 app.use('/api/users', require('./routes/userRoutes'));
 
+app.use('/api/tickets', require('./routes/ticketsRoutes'));
+
 app.use(errorHandler);
 
 // Listen for port/connection and returns server
