@@ -89,7 +89,15 @@ li {
   margin-bottom: 10px;
 }
 
-.form-group input {
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.form-group input,
+select,
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #eae1e1;
@@ -127,7 +135,12 @@ li {
 
 .btn-block {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.btn-back {
+  width: 150px;
+  margin-bottom: 50px;
 }
 
 .btn:hover {
