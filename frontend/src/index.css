@@ -148,6 +148,11 @@ textarea {
   font-size: 15px;
 }
 
+.btn-danger {
+  background: darkred;
+  border: none;
+}
+
 .btn:hover {
   transform: scale(0.99);
 }
@@ -219,6 +224,15 @@ textarea {
   border: 1px #ccc solid;
   padding: 10px 15px;
   border-radius: 5px;
+}
+
+.ticket-page .btn {
+  margin-bottom: 30px;
+}
+
+.ticket-page .btn-block {
+  width: 100%;
+  margin-top: 30px;
 }
 
 .loadingSpinnerContainer {
