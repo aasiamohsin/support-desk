@@ -143,8 +143,82 @@ textarea {
   margin-bottom: 50px;
 }
 
+.btn-sm {
+  padding: 5px 15px;
+  font-size: 15px;
+}
+
 .btn:hover {
   transform: scale(0.99);
+}
+
+.ticket,
+.ticket-headings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.ticket-headings {
+  font-weight: 700;
+}
+
+.status {
+  background-color: #505050;
+  color: #ffffff;
+  width: 100%;
+  padding: 5px 15px;
+  border-radius: 5px;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+}
+
+.status-new {
+  background-color: #21713d;
+}
+
+.status-open {
+  background-color: #1e35a6;
+}
+
+.status-closed {
+  background-color: #8a1f1f;
+}
+
+.ticket-page {
+  position: relative;
+  text-align: left;
+}
+
+.ticket-header h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticket-header h3 > .status {
+  width: 15%;
+}
+
+.ticket-header h4 {
+  margin: 10px 0;
+}
+
+.ticket-desc {
+  margin: 20px 0;
+  font-size: 17px;
+  background-color: #f4f4f4;
+  border: 1px #ccc solid;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .loadingSpinnerContainer {
