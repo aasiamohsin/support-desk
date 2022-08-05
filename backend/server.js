@@ -1,4 +1,5 @@
 // Import express module to ctreate express app
+const path = require('path');
 const express = require('express');
 const colors = require('colors');
 const { errorHandler } = require('./middleware/errorMiddleware');
@@ -20,14 +21,23 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
 
-// Returns response
-app.get('/', (req, res) =>
-  res.status(200).json({ message: 'Welcome to Support Desk!' })
-);
-
 app.use('/api/users', require('./routes/userRoutes'));
 
 app.use('/api/tickets', require('./routes/ticketsRoutes'));
+
+// Serve Frontend
+if (process.env.NODE_ENV === 'production') {
+  // Set build folder as static
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+  app.get('*', (req, res) =>
+    res.sendFile(__dirname, '../', 'frontend', 'build', 'index.html')
+  );
+} else {
+  // Returns response
+  app.get('/', (req, res) =>
+    res.status(200).json({ message: 'Welcome to Support Desk!' })
+  );
+}
 
 app.use(errorHandler);
 
